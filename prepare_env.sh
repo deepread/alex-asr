@@ -4,7 +4,8 @@ set -e
 PYTHON=python
 FSTDIR=$(python -c "from __future__ import print_function; import os,sys; print(os.path.realpath(sys.argv[1]))" libs/kaldi/tools/openfst)
 OPENFST_VERSION=1.3.4
-KALDI_REV=ea37842dc1f4f03819acae27a6363c993ce5d12b
+KALDI_REV=0e5bb81e28693ac138ec50ef5f022e5a2154343d
+#ea37842dc1f4f03819acae27a6363c993ce5d12b
 
 
 if [ ! -d libs ]; then

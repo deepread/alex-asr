@@ -11,7 +11,7 @@ RANLIB = ranlib
 PYTHON = python
 # PYTHON = python3  # Use this line if you want to build the extension for python3.
 
-FSTROOT = $(KALDI_DIR)/tools/openfst/
+FSTROOT = $(KALDI_DIR)/tools/openfst-1.3.4/
 LIBFILE = $(LIBNAME).a
 
 OBJFILES = src/decoder.o src/utils.o src/feature_pipeline.o \
