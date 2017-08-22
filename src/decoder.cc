@@ -187,7 +187,7 @@ namespace alex_asr {
         LatticeWeight weight;
         std::vector<int32> ids;
         fst::GetLinearSymbolSequence(lat,
-                                     static_cast<vector<int32> *>(0),
+                                     static_cast<std::vector<int32> *>(0),
                                      out_words,
                                      &weight);
 

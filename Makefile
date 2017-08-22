@@ -11,7 +11,7 @@ RANLIB = ranlib
 PYTHON = python
 # PYTHON = python3  # Use this line if you want to build the extension for python3.
 
-FSTROOT = $(KALDI_DIR)/tools/openfst-1.3.4/
+FSTROOT = $(KALDI_DIR)/tools/openfst/
 LIBFILE = $(LIBNAME).a
 
 OBJFILES = src/decoder.o src/utils.o src/feature_pipeline.o \
@@ -41,7 +41,7 @@ ADDLIBS = $(FSTROOT)/src/lib/.libs/libfst.a \
           $(KALDI_DIR)/src/feat/kaldi-feat.a \
           $(KALDI_DIR)/src/transform/kaldi-transform.a \
           $(KALDI_DIR)/src/gmm/kaldi-gmm.a \
-          $(KALDI_DIR)/src/thread/kaldi-thread.a \
+          $(KALDI_DIR)/src/util/kaldi-util.a \
           $(KALDI_DIR)/src/hmm/kaldi-hmm.a \
           $(KALDI_DIR)/src/tree/kaldi-tree.a \
           $(KALDI_DIR)/src/matrix/kaldi-matrix.a \

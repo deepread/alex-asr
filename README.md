@@ -7,7 +7,7 @@ Python module documentation is [here](http://ufal-dsg.github.io/alex-asr/).
 # Example Usage
 
 ```python
-from alex_asr import Decoder
+from alex_asr.decoder import Decoder
 import wave
 import struct
 import os
