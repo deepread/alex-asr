@@ -31,7 +31,7 @@ def kaldi_path(path):
 
 class build_ext_with_make(build_ext):
     def run(self):
-        os.system('(cd "%s"; bash prepare_env.sh; make)' % curr_dir)
+        # os.system('(cd "%s"; bash prepare_env.sh; make)' % curr_dir)
 
         with open('setup.py.add_libs') as f_in:
             libs = f_in.read().split()
