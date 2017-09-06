@@ -13,9 +13,7 @@ RUN pip install Cython
 
 ADD . /alex-asr
 
-RUN cd /alex-asr && bash prepare_env.sh
-RUN cd /alex-asr make
+# RUN cd /alex-asr && bash prepare_env.sh
+# RUN cd /alex-asr make
 
 RUN cd /alex-asr && python setup.py install
-
-RUN

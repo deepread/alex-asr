@@ -31,7 +31,7 @@ def kaldi_path(path):
 
 class build_ext_with_make(build_ext):
     def run(self):
-        # os.system('(cd "%s"; bash prepare_env.sh; make)' % curr_dir)
+        os.system('(cd "%s"; bash prepare_env.sh; make)' % curr_dir)
 
         with open('setup.py.add_libs') as f_in:
             libs = f_in.read().split()
@@ -63,6 +63,7 @@ setup(
     setup_requires=['cython>=0.19.1', 'nose>=1.0'],
     ext_modules=[
         Extension('alex_asr.decoder',
+            extra_compile_args=['-std=c++11'],  # NOTE: This is for backward compatibility with gcc 4.6 which is in ubuntu 12.04. Ideally we should use '-std=c++11'.
             language='c++',
             include_dirs=[
                 '.',

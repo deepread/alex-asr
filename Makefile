@@ -29,7 +29,8 @@ CXXFLAGS = -msse -msse2 -Wall \
       -I$(KALDI_DIR)/src \
       -I$(KALDI_DIR)/tools/ATLAS/include \
       -I$(KALDI_DIR)/tools/CLAPACK \
-      -Wno-sign-compare -I. -fPIC
+      -Wno-sign-compare -I. -fPIC \
+			-std=c++11
 
 ADDLIBS = $(FSTROOT)/src/lib/.libs/libfst.a \
           $(KALDI_DIR)/src/online2/kaldi-online2.a \
@@ -72,5 +73,3 @@ clean:
 
 test:
 	(PYTHONPATH=$(shell echo build/lib.*) python test/test.py )
-
-
